@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Madhu Sudhan Painoori — Senior Director, Quality Engineering</title>
+<meta name="description" content="Senior Director, Quality Engineering at AutoRabit. AI platforms serving Product, Engineering, QA, SRE, and Support. Automated ~95% of manual QA effort and reduced customer escalations by ~70%.">
+<meta name="author" content="Madhu Sudhan Painoori">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Madhu Sudhan Painoori — Senior Director, Quality Engineering">
+<meta property="og:description" content="AI Platforms Serving Product · Engineering · QA · SRE · Support. ~95% manual effort automated. ~70% customer escalations reduced.">
+<meta property="og:image" content="./assets/infographic.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream: #FAF7F2;
+    --cream-2: #F2EEE5;
+    --paper: #FFFFFF;
+    --ink: #0E1A2E;
+    --ink-2: #14213D;
+    --navy: #1F3A68;
+    --accent: #2E75B6;
+    --gold: #B8911E;
+    --gold-soft: #D9B547;
+    --gold-bg: #FBF3DE;
+    --muted: #6B6B6B;
+    --line: #E8E2D5;
+    --serif: 'Instrument Serif', 'Garamond', Georgia, serif;
+    --sans: 'Inter', -apple-system, system-ui, sans-serif;
+    --mono: 'JetBrains Mono', Menlo, monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); color: var(--ink); background: var(--cream); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: radial-gradient(rgba(31,58,104,0.025) 1px, transparent 1px); background-size: 18px 18px; pointer-events: none; z-index: 0; }
+  .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 1; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(14,26,46,0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 18px 32px; max-width: 1240px; margin: 0 auto; }
+  .nav-name { font-family: var(--serif); font-size: 22px; color: var(--cream); letter-spacing: 0.3px; }
+  .nav-name em { color: var(--gold-soft); font-style: italic; font-weight: 400; }
+  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-links a { color: rgba(250,247,242,0.7); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.2s; font-family: var(--mono); }
+  .nav-links a:hover { color: var(--gold-soft); }
+  .nav-cta { background: var(--gold-soft) !important; color: var(--ink) !important; padding: 10px 18px; border-radius: 2px; font-weight: 600 !important; transition: all 0.2s; }
+  .nav-cta:hover { background: var(--gold) !important; color: var(--cream) !important; transform: translateY(-1px); }
+  @media (max-width: 760px) { .nav-links a:not(.nav-cta) { display: none; } .nav-inner { padding: 14px 20px; } }
+
+  .hero { background: var(--ink); color: var(--cream); padding: 180px 0 120px; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -30%; right: -10%; width: 60%; height: 120%; background: radial-gradient(ellipse at center, rgba(184,145,30,0.12), transparent 65%); pointer-events: none; }
+  .hero::after { content: ''; position: absolute; bottom: -10%; left: -5%; width: 40%; height: 60%; background: radial-gradient(ellipse at center, rgba(46,117,182,0.18), transparent 60%); pointer-events: none; }
+  .hero-inner { position: relative; z-index: 2; }
+  .hero-label { font-family: var(--mono); font-size: 12px; letter-spacing: 3px; color: var(--gold-soft); text-transform: uppercase; margin-bottom: 32px; display: inline-flex; align-items: center; gap: 12px; }
+  .hero-label::before { content: ''; width: 32px; height: 1px; background: var(--gold-soft); }
+  .hero h1 { font-family: var(--serif); font-size: clamp(48px, 7vw, 88px); line-height: 1.02; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 32px; max-width: 14ch; }
+  .hero h1 em { font-style: italic; color: var(--gold-soft); font-weight: 400; }
+  .hero-sub { font-size: clamp(18px, 2vw, 22px); line-height: 1.5; color: rgba(250,247,242,0.78); max-width: 56ch; margin-bottom: 56px; font-weight: 300; }
+  .hero-sub strong { color: var(--cream); font-weight: 500; }
+  .hero-meta { display: flex; gap: 48px; padding-top: 40px; border-top: 1px solid rgba(250,247,242,0.12); flex-wrap: wrap; }
+  .meta-item .label { font-family: var(--mono); font-size: 11px; letter-spacing: 2px; color: rgba(250,247,242,0.5); text-transform: uppercase; margin-bottom: 6px; }
+  .meta-item .value { font-family: var(--serif); font-size: 20px; color: var(--cream); font-style: italic; }
+  .meta-item a { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(217,181,71,0.4); transition: border-color 0.2s; }
+  .meta-item a:hover { border-color: var(--gold-soft); }
+
+  .metrics { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 80px 0; }
+  .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+  .metric { text-align: left; padding: 0 32px; border-left: 1px solid var(--line); }
+  .metric:first-child { border-left: none; padding-left: 0; }
+  .metric .num { font-family: var(--serif); font-size: clamp(40px, 5vw, 64px); color: var(--navy); line-height: 1; font-weight: 400; margin-bottom: 12px; letter-spacing: -0.02em; }
+  .metric .num em { font-style: italic; color: var(--gold); }
+  .metric .label { font-family: var(--mono); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); line-height: 1.5; }
+  @media (max-width: 860px) { .metrics-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 0; } .metric { padding: 0 20px; } .metric:nth-child(3) { border-left: none; padding-left: 0; } }
+
+  section { padding: 120px 0; position: relative; }
+  .section-label { font-family: var(--mono); font-size: 12px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 20px; display: inline-flex; align-items: center; gap: 12px; }
+  .section-label::before { content: ''; width: 24px; height: 1px; background: var(--gold); }
+  .section-title { font-family: var(--serif); font-size: clamp(36px, 5vw, 56px); line-height: 1.1; color: var(--ink); margin-bottom: 28px; font-weight: 400; letter-spacing: -0.01em; max-width: 22ch; }
+  .section-title em { font-style: italic; color: var(--navy); }
+  .section-intro { font-size: 19px; line-height: 1.6; color: var(--ink-2); max-width: 64ch; margin-bottom: 80px; font-weight: 300; }
+
+  .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .pillar { background: var(--paper); border: 1px solid var(--line); padding: 40px; position: relative; transition: transform 0.3s, border-color 0.3s; }
+  .pillar:hover { transform: translateY(-4px); border-color: var(--gold-soft); }
+  .pillar .num { font-family: var(--serif); font-style: italic; font-size: 32px; color: var(--gold); margin-bottom: 24px; line-height: 1; }
+  .pillar h3 { font-family: var(--serif); font-size: 26px; line-height: 1.2; color: var(--ink); margin-bottom: 16px; font-weight: 400; }
+  .pillar p { color: var(--muted); font-size: 15px; line-height: 1.65; margin-bottom: 20px; }
+  .pillar ul { list-style: none; border-top: 1px solid var(--line); padding-top: 20px; }
+  .pillar li { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.5px; color: var(--navy); padding: 5px 0; text-transform: uppercase; }
+  .pillar li::before { content: '— '; color: var(--gold); }
+  @media (max-width: 860px) { .pillars { grid-template-columns: 1fr; } }
+
+  .architecture { background: var(--cream-2); position: relative; }
+  .architecture::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(31,58,104,0.04) 1px, transparent 1px); background-size: 24px 24px; pointer-events: none; }
+  .architecture-inner { position: relative; z-index: 1; }
+  .infographic-frame { background: var(--paper); padding: 24px; border: 1px solid var(--line); box-shadow: 0 30px 80px rgba(14,26,46,0.12); border-radius: 4px; margin-bottom: 40px; }
+  .infographic-frame img { width: 100%; height: auto; display: block; }
+  .infographic-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; font-family: var(--mono); font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; transition: all 0.2s; border-radius: 2px; font-weight: 500; cursor: pointer; border: 1px solid transparent; }
+  .btn-primary { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+  .btn-primary:hover { background: var(--navy); border-color: var(--navy); transform: translateY(-1px); }
+  .btn-secondary { background: transparent; color: var(--ink); border-color: var(--ink); }
+  .btn-secondary:hover { background: var(--ink); color: var(--cream); transform: translateY(-1px); }
+  .btn-gold { background: var(--gold); color: var(--cream); border-color: var(--gold); }
+  .btn-gold:hover { background: var(--gold-soft); color: var(--ink); transform: translateY(-1px); }
+  .btn svg { width: 14px; height: 14px; }
+
+  .case-study { background: var(--ink); color: var(--cream); position: relative; overflow: hidden; }
+  .case-study::before { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: radial-gradient(ellipse at top right, rgba(184,145,30,0.1), transparent 70%); }
+  .case-study .section-label { color: var(--gold-soft); }
+  .case-study .section-label::before { background: var(--gold-soft); }
+  .case-study .section-title { color: var(--cream); }
+  .case-study .section-title em { color: var(--gold-soft); }
+  .case-study .section-intro { color: rgba(250,247,242,0.78); }
+  .case-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 80px; align-items: start; }
+  .case-points { display: flex; flex-direction: column; gap: 28px; }
+  .case-point { border-left: 2px solid var(--gold-soft); padding: 4px 0 4px 24px; }
+  .case-point h4 { font-family: var(--serif); font-size: 22px; line-height: 1.3; color: var(--cream); margin-bottom: 8px; font-weight: 400; }
+  .case-point p { color: rgba(250,247,242,0.72); font-size: 15px; line-height: 1.6; }
+  .case-cta { background: rgba(250,247,242,0.05); border: 1px solid rgba(250,247,242,0.12); padding: 40px; border-radius: 4px; }
+  .case-cta h4 { font-family: var(--serif); font-size: 28px; line-height: 1.2; color: var(--cream); margin-bottom: 16px; font-weight: 400; }
+  .case-cta p { color: rgba(250,247,242,0.7); font-size: 15px; line-height: 1.6; margin-bottom: 24px; }
+  .case-cta .pages { font-family: var(--mono); font-size: 11px; letter-spacing: 1.5px; color: var(--gold-soft); text-transform: uppercase; margin-bottom: 20px; }
+  .case-cta-actions { display: flex; flex-direction: column; gap: 12px; }
+  .case-cta .btn-gold { width: 100%; justify-content: center; }
+  .case-cta .btn-secondary { color: var(--cream); border-color: rgba(250,247,242,0.3); width: 100%; justify-content: center; }
+  .case-cta .btn-secondary:hover { background: var(--cream); color: var(--ink); }
+  @media (max-width: 860px) { .case-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+  .timeline { display: grid; gap: 0; }
+  .timeline-item { display: grid; grid-template-columns: 200px 1fr; gap: 60px; padding: 40px 0; border-top: 1px solid var(--line); align-items: start; }
+  .timeline-item:last-child { border-bottom: 1px solid var(--line); }
+  .timeline-period { font-family: var(--mono); font-size: 12px; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; padding-top: 6px; }
+  .timeline-content { display: flex; flex-direction: column; gap: 8px; }
+  .timeline-role { font-family: var(--serif); font-size: 26px; line-height: 1.2; color: var(--ink); font-weight: 400; }
+  .timeline-company { font-size: 15px; color: var(--navy); font-weight: 500; margin-bottom: 8px; }
+  .timeline-desc { font-size: 15px; line-height: 1.6; color: var(--muted); max-width: 64ch; }
+  .timeline-current { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .timeline-current::before { content: ''; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 0 4px rgba(184,145,30,0.2); animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 4px rgba(184,145,30,0.2); } 50% { box-shadow: 0 0 0 8px rgba(184,145,30,0.08); } }
+  .timeline-current span { font-family: var(--mono); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  @media (max-width: 760px) { .timeline-item { grid-template-columns: 1fr; gap: 12px; padding: 32px 0; } }
+
+  .tech { background: var(--cream-2); }
+  .tech-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; }
+  .tech-block h4 { font-family: var(--mono); font-size: 11px; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .tech-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tech-tag { font-family: var(--mono); font-size: 12px; padding: 6px 12px; background: var(--paper); border: 1px solid var(--line); color: var(--ink); letter-spacing: 0.3px; border-radius: 2px; }
+  .tech-tag.featured { background: var(--gold-bg); border-color: var(--gold-soft); color: var(--gold); font-weight: 500; }
+  @media (max-width: 760px) { .tech-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+  .contact { background: var(--ink); color: var(--cream); padding: 140px 0 80px; position: relative; overflow: hidden; }
+  .contact::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(ellipse 60% 50% at 30% 30%, rgba(46,117,182,0.15), transparent 70%), radial-gradient(ellipse 40% 40% at 80% 70%, rgba(184,145,30,0.1), transparent 70%); pointer-events: none; }
+  .contact-inner { position: relative; z-index: 1; }
+  .contact .section-label { color: var(--gold-soft); }
+  .contact .section-label::before { background: var(--gold-soft); }
+  .contact h2 { font-family: var(--serif); font-size: clamp(42px, 6vw, 72px); line-height: 1.1; color: var(--cream); margin-bottom: 40px; font-weight: 400; letter-spacing: -0.01em; max-width: 18ch; }
+  .contact h2 em { color: var(--gold-soft); font-style: italic; }
+  .contact-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 80px; margin-bottom: 100px; align-items: start; }
+  .contact-text p { font-size: 19px; line-height: 1.6; color: rgba(250,247,242,0.78); margin-bottom: 24px; font-weight: 300; max-width: 56ch; }
+  .contact-text p strong { color: var(--cream); font-weight: 500; }
+  .contact-channels { display: flex; flex-direction: column; gap: 20px; }
+  .channel { display: block; padding: 20px 0; border-bottom: 1px solid rgba(250,247,242,0.12); text-decoration: none; color: var(--cream); transition: padding 0.2s; }
+  .channel:hover { padding-left: 8px; }
+  .channel .label { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; color: rgba(250,247,242,0.5); text-transform: uppercase; display: block; margin-bottom: 6px; }
+  .channel .value { font-family: var(--serif); font-size: 22px; color: var(--cream); font-style: italic; }
+  .channel:hover .value { color: var(--gold-soft); }
+  .footer-bar { padding-top: 40px; border-top: 1px solid rgba(250,247,242,0.12); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+  .footer-bar p { font-family: var(--mono); font-size: 11px; letter-spacing: 1px; color: rgba(250,247,242,0.4); text-transform: uppercase; }
+  @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .hero-label, .hero h1, .hero-sub, .hero-meta { animation: fadeUp 0.8s ease-out backwards; }
+  .hero-label { animation-delay: 0.1s; }
+  .hero h1 { animation-delay: 0.2s; }
+  .hero-sub { animation-delay: 0.4s; }
+  .hero-meta { animation-delay: 0.6s; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-name">Madhu <em>Painoori</em></div>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#playbook">Playbook</a>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-inner">
+    <div class="hero-label">Senior Director · Quality Engineering · AutoRabit</div>
+    <h1>Building <em>AI platforms</em> that power engineering organizations.</h1>
+    <p class="hero-sub">
+      I lead Quality Engineering at AutoRabit, the DevSecOps platform for Salesforce, with a <strong>10-person QA org and 100+ matrix scope</strong> across Product, Engineering, QA, SRE, and Support. I build AI agent fleets, an agentic delivery platform on AWS Kiro, and the in-house intelligence layer (RabbitView) that powers our engineering organization.
+    </p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <div class="label">Based in</div>
+        <div class="value">Hyderabad, India</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">Open to</div>
+        <div class="value">Senior leadership conversations</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">Reach me</div>
+        <div class="value"><a href="mailto:p.mschary@gmail.com">p.mschary@gmail.com</a></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="metrics" style="padding: 80px 0;">
+  <div class="container">
+    <div class="metrics-grid">
+      <div class="metric">
+        <div class="num">~<em>95</em>%</div>
+        <div class="label">Manual QA Effort<br>Automated via AI Agents</div>
+      </div>
+      <div class="metric">
+        <div class="num">~<em>70</em>%</div>
+        <div class="label">Customer Escalations<br>Reduced</div>
+      </div>
+      <div class="metric">
+        <div class="num"><em>110</em>+</div>
+        <div class="label">Cross-Functional Scope<br>Product · Eng · QA · SRE · Support</div>
+      </div>
+      <div class="metric">
+        <div class="num"><em>20</em>+</div>
+        <div class="label">Years Scaling Quality<br>Engineering Functions</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="container">
+    <div class="section-label">What I Build</div>
+    <h2 class="section-title">Three things, working in concert <em>across the organization</em>.</h2>
+    <p class="section-intro">
+      The work at AutoRabit isn't just QE. It's a connected system of AI platforms, agent fleets, and engineering intelligence tools that serve every team — and remove the most painful 95% of recurring manual work.
+    </p>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="num">01</div>
+        <h3>An agentic AI delivery platform</h3>
+        <p>Built on AWS Kiro with specs, skills, steering documents, and curated MCPs. Consumes a Jira story; returns a validated release.</p>
+        <ul>
+          <li>Jira story intake</li>
+          <li>Story development</li>
+          <li>Impact analysis</li>
+          <li>AI-generated tests</li>
+          <li>Playwright + MCP + Bedrock</li>
+          <li>Self-healing execution</li>
+        </ul>
+      </div>
+      <div class="pillar">
+        <div class="num">02</div>
+        <h3>A fleet of specialized agents</h3>
+        <p>Purpose-built agents serving the broader engineering organization, not just QE — extending the AI investment across the team.</p>
+        <ul>
+          <li>PR Quality &amp; Coverage Agent</li>
+          <li>Performance Optimizing Agent</li>
+          <li>AutoScreen recruitment agent</li>
+          <li>AI-enabled TMS (Bedrock)</li>
+          <li>Activates on every PR</li>
+          <li>Across the engineering team</li>
+        </ul>
+      </div>
+      <div class="pillar">
+        <div class="num">03</div>
+        <h3>RabbitView — engineering intelligence</h3>
+        <p>The single pane of glass for Product, Engineering, and QA leadership. The platform that explains why my matrix scope is cross-functional.</p>
+        <ul>
+          <li>DORA metrics</li>
+          <li>Individual + team velocity</li>
+          <li>Product backlog</li>
+          <li>Release monitoring</li>
+          <li>Team analytics</li>
+          <li>Built TypeScript / Python / Redis</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="architecture" id="architecture">
+  <div class="container architecture-inner">
+    <div class="section-label">Architecture</div>
+    <h2 class="section-title">The system, <em>at a glance</em>.</h2>
+    <p class="section-intro">One page. Every component, every agent, every platform. The diagram I bring into interviews and walkthroughs.</p>
+    <div class="infographic-frame">
+      <img src="./assets/infographic.png" alt="AI-Native Engineering Excellence Architecture — Madhu Painoori" loading="lazy">
+    </div>
+    <div class="infographic-actions">
+      <a class="btn btn-primary" href="./assets/infographic.pdf" download>
+        Download as PDF
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14m-6-6 6 6 6-6"/></svg>
+      </a>
+      <a class="btn btn-secondary" href="./assets/infographic.png" download>
+        Download as PNG (high-res)
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14m-6-6 6 6 6-6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="case-study" id="playbook">
+  <div class="container">
+    <div class="section-label">The Playbook</div>
+    <h2 class="section-title">A working account of <em>how it was actually built</em>.</h2>
+    <p class="section-intro">12 pages, written for engineering leaders being asked to do more with AI. Not a vendor pitch. A candid walkthrough of what worked, what didn't, and what I'd do differently.</p>
+    <div class="case-grid">
+      <div class="case-points">
+        <div class="case-point">
+          <h4>The problem we were solving</h4>
+          <p>Manual QA bottleneck, monolith-to-microservices transformation, regression cycles that couldn't keep pace with engineering velocity.</p>
+        </div>
+        <div class="case-point">
+          <h4>Five principles that guided the transformation</h4>
+          <p>Agents do the work. Buy commercial AI for breadth, build custom for moats. Specs before agents. Visibility is non-negotiable. Customer impact is the only score.</p>
+        </div>
+        <div class="case-point">
+          <h4>The flagship agentic platform — deep dive</h4>
+          <p>Built on AWS Kiro: specs, trained skills, steering documents, enabled MCPs. Jira to validated release as one continuous agent workflow.</p>
+        </div>
+        <div class="case-point">
+          <h4>The specialized agent fleet</h4>
+          <p>Performance Optimizing Agent, PR Quality &amp; Coverage Agent, AutoScreen — and the pattern that made each of them succeed.</p>
+        </div>
+        <div class="case-point">
+          <h4>Results, lessons, and what's next</h4>
+          <p>What worked, what didn't work at first, and the frontier ahead — multi-agent coordination and customer-telemetry-driven prioritization.</p>
+        </div>
+      </div>
+      <aside class="case-cta">
+        <div class="pages">12 pages · ~15 min read</div>
+        <h4>AI-Native Quality Engineering: A Senior Director's Playbook</h4>
+        <p>Includes the full architecture diagram, the tool portfolio decisions, the spec-driven agent pattern, the in-house platforms, and the lessons. Send it to anyone evaluating you for senior leadership.</p>
+        <div class="case-cta-actions">
+          <a class="btn btn-gold" href="./assets/playbook.pdf" download>
+            Download the Playbook (PDF)
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14m-6-6 6 6 6-6"/></svg>
+          </a>
+          <a class="btn btn-secondary" href="./assets/playbook.docx" download>
+            Editable version (DOCX)
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14m-6-6 6 6 6-6"/></svg>
+          </a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-label">Experience</div>
+    <h2 class="section-title">Twenty years, <em>five chapters</em>.</h2>
+    <p class="section-intro">From production DBA to Senior Director, the throughline has always been the same: scale engineering quality without scaling effort linearly. AI agents are the latest answer to a question I've been asking for two decades.</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-period">May 2021 — Present</div>
+        <div class="timeline-content">
+          <div class="timeline-current"><span>Current Role</span></div>
+          <div class="timeline-role">Senior Director, Quality Engineering</div>
+          <div class="timeline-company">AutoRabit Pvt Ltd · DevSecOps SaaS for Salesforce</div>
+          <p class="timeline-desc">Cross-functional leadership across Product, Engineering, QA, SRE, and Support. Built the agentic AI platform, RabbitView, and the in-house intelligence layer. Automated ~95% of manual QA effort and reduced customer escalations by ~70%.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">Sep 2017 — May 2021</div>
+        <div class="timeline-content">
+          <div class="timeline-role">QA Manager &amp; Scrum Master</div>
+          <div class="timeline-company">CoMakeIT Pvt Ltd · Iddink (Netherlands EdTech)</div>
+          <p class="timeline-desc">Established and led a 10-member QA team for a Netherlands-based EdTech platform digitizing schools nationwide. Owned release management end-to-end and security validation for the public-facing application.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">Mar 2012 — Sep 2017</div>
+        <div class="timeline-content">
+          <div class="timeline-role">Senior Member Technical · QA Lead</div>
+          <div class="timeline-company">Oracle India Private Limited · WebCenter &amp; Cloud Services</div>
+          <p class="timeline-desc">QA leadership across Oracle WebCenter Sites, Sites Cloud Service, and Documents Cloud Service. Owned performance engineering, profiling, and security testing for enterprise content management at Oracle scale.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">Jan 2011 — Mar 2012</div>
+        <div class="timeline-content">
+          <div class="timeline-role">Senior Database Administrator</div>
+          <div class="timeline-company">NetEnrich Private Limited · Disney/Playdom</div>
+          <p class="timeline-desc">Production DBA for the Disney Playdom Facebook gaming portfolio. Tuned MySQL schemas, queries, and APIs to sustain Facebook-scale gaming traffic.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">Oct 2007 — Sep 2010</div>
+        <div class="timeline-content">
+          <div class="timeline-role">Technical Lead</div>
+          <div class="timeline-company">Zeta Interactive Private Limited · Performance, DBA &amp; Security</div>
+          <p class="timeline-desc">Certified Zeta Mail (Flash) for 1,000 concurrent users at sub-5-second SLAs. Benchmarked Zeta Next Pages for 10,000 concurrent users. Led the MySQL 5.0 to 5.1 migration with zero data loss.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tech">
+  <div class="container">
+    <div class="section-label">Stack</div>
+    <h2 class="section-title">Tools and platforms <em>I work with</em>.</h2>
+    <p class="section-intro">Selected for fit, not for novelty. Highlighted in gold: the platforms I've built systems on (not just consumed).</p>
+    <div class="tech-grid">
+      <div class="tech-block">
+        <h4>AI &amp; GenAI</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">GitHub Copilot</span>
+          <span class="tech-tag">ChatGPT</span>
+          <span class="tech-tag">Claude</span>
+          <span class="tech-tag featured">Amazon Bedrock</span>
+          <span class="tech-tag featured">AWS Kiro</span>
+          <span class="tech-tag">Cursor</span>
+          <span class="tech-tag">KaneAI</span>
+          <span class="tech-tag">Mabl</span>
+          <span class="tech-tag">TestAI</span>
+          <span class="tech-tag featured">Playwright + MCP</span>
+        </div>
+      </div>
+      <div class="tech-block">
+        <h4>In-house platforms (TypeScript · Python · Docker · PostgreSQL · Redis)</h4>
+        <div class="tech-tags">
+          <span class="tech-tag featured">RabbitView</span>
+          <span class="tech-tag featured">Agentic AI Platform</span>
+          <span class="tech-tag featured">AI-Enabled TMS</span>
+          <span class="tech-tag featured">Report Portal</span>
+          <span class="tech-tag featured">Telemetry</span>
+          <span class="tech-tag featured">Skill Matrix</span>
+          <span class="tech-tag featured">Performance Optimizing Agent</span>
+          <span class="tech-tag featured">AutoScreen</span>
+        </div>
+      </div>
+      <div class="tech-block">
+        <h4>Test Automation &amp; Performance</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">Selenium WebDriver</span>
+          <span class="tech-tag">TestNG</span>
+          <span class="tech-tag">Playwright</span>
+          <span class="tech-tag">Apache Maven</span>
+          <span class="tech-tag">Protractor</span>
+          <span class="tech-tag">Test Allure</span>
+          <span class="tech-tag">Neoload</span>
+          <span class="tech-tag">JMeter</span>
+          <span class="tech-tag">LoadRunner</span>
+          <span class="tech-tag">JProfiler</span>
+        </div>
+      </div>
+      <div class="tech-block">
+        <h4>APM, DevOps &amp; Security</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">Datadog</span>
+          <span class="tech-tag">Dynatrace</span>
+          <span class="tech-tag">Prometheus</span>
+          <span class="tech-tag">Grafana</span>
+          <span class="tech-tag">CloudWatch</span>
+          <span class="tech-tag">Jenkins</span>
+          <span class="tech-tag">Chef</span>
+          <span class="tech-tag">Puppet</span>
+          <span class="tech-tag">Acunetix</span>
+          <span class="tech-tag">Burp Suite</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-inner">
+    <div class="section-label">Get in touch</div>
+    <h2>Always open to <em>good conversations</em>.</h2>
+    <div class="contact-grid">
+      <div class="contact-text">
+        <p>I'm currently <strong>Senior Director, Quality Engineering at AutoRabit</strong>, and I'm open to conversations about senior leadership roles — VP and Senior Director positions in Quality Engineering, Engineering Effectiveness, Engineering Productivity, or AI for Engineering.</p>
+        <p>I'm particularly interested in <strong>SaaS, AI-native</strong>, and <strong>Salesforce-ecosystem</strong> companies, but happy to hear from anyone whose engineering organization is working on the kinds of problems described in the playbook.</p>
+        <p>The fastest way to reach me is email. I respond to most inquiries within 48 hours.</p>
+        <div style="margin-top: 40px; display: flex; gap: 16px; flex-wrap: wrap;">
+          <a class="btn btn-gold" href="./assets/resume.pdf" download>
+            Download résumé (PDF)
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14m-6-6 6 6 6-6"/></svg>
+          </a>
+          <a class="btn btn-secondary" href="mailto:p.mschary@gmail.com">Email me</a>
+        </div>
+      </div>
+      <div class="contact-channels">
+        <a class="channel" href="mailto:p.mschary@gmail.com">
+          <span class="label">Email</span>
+          <span class="value">p.mschary@gmail.com</span>
+        </a>
+        <a class="channel" href="tel:+918008690004">
+          <span class="label">Phone</span>
+          <span class="value">+91 80086 90004</span>
+        </a>
+        <a class="channel" href="https://www.linkedin.com/in/madhu-sudhan-painoori" target="_blank" rel="noopener">
+          <span class="label">LinkedIn</span>
+          <span class="value">linkedin.com/in/madhu-sudhan-painoori</span>
+        </a>
+        <div class="channel" style="cursor: default;">
+          <span class="label">Location</span>
+          <span class="value">Hyderabad, India</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <p>© 2026 Madhu Sudhan Painoori</p>
+      <p>Hosted on GitHub Pages</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
+
+</body>
+</html>
