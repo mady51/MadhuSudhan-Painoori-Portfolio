@@ -192,6 +192,15 @@
   .rv-hl p { font-size: 14.5px; line-height: 1.62; color: var(--muted); }
   .rv-hl code { font-family: var(--mono); font-size: 12.5px; color: var(--gold); background: var(--gold-bg); padding: 1px 5px; border-radius: 2px; }
   .rv-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 56px; }
+  .rv-pipeline { list-style: none; border-left: 2px solid var(--line); margin: 4px 0 0 10px; }
+  .rv-pipeline li { position: relative; display: grid; grid-template-columns: 116px 1fr; gap: 28px; padding: 0 0 30px 30px; }
+  .rv-pipeline li:last-child { padding-bottom: 0; }
+  .rv-pipeline li::before { content: ''; position: absolute; left: -8px; top: 3px; width: 13px; height: 13px; border-radius: 50%; background: var(--gold-soft); border: 2px solid var(--paper); box-shadow: 0 0 0 3px var(--cream); }
+  .rv-pipeline .ph { font-family: var(--mono); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); padding-top: 2px; }
+  .rv-pipeline .step strong { display: block; font-size: 15px; color: var(--ink); font-weight: 600; margin-bottom: 5px; }
+  .rv-pipeline .step strong code { font-family: var(--mono); font-size: 13.5px; font-weight: 500; color: var(--navy); }
+  .rv-pipeline .step span { font-size: 13.5px; color: var(--muted); line-height: 1.55; }
+  @media (max-width: 680px) { .rv-pipeline li { grid-template-columns: 1fr; gap: 4px; } }
   @media (max-width: 860px) { .rv-highlights { grid-template-columns: 1fr; } }
 
 
@@ -381,9 +390,36 @@
     <div class="rv-diagram">
       <h3>How the agent thinks</h3>
       <p class="cap">A single SDET run: a DB-backed worker queue claims the job, gathers context, embeds and retrieves across seven lenses, reasons with Bedrock across two concurrency lanes, and stops at a human approval gate before any reversible write.</p>
-      <div class="diagram-frame">
-        <img src="./assets/runview-agentflow.png" alt="RunView SDET agent run: trigger, DB-backed worker queue, context pull, Titan embedding and pgvector retrieval across seven lenses, AWS Bedrock analysis in interactive and background lanes, then human approval and reversible TestSigma push" loading="lazy">
-      </div>
+      <ol class="rv-pipeline">
+        <li>
+          <span class="ph">Trigger</span>
+          <div class="step"><strong><code>POST /api/sdet-agent/runs</code></strong><span>editor · { workspace, story_key, tester_prompt? } — queued, no Redis or Celery.</span></div>
+        </li>
+        <li>
+          <span class="ph">Queue</span>
+          <div class="step"><strong>DB-backed worker pool</strong><span>N consumers claim atomically (<code>FOR UPDATE SKIP LOCKED</code>), with per-workspace fairness caps, retry/backoff, and trigger dedupe.</span></div>
+        </li>
+        <li>
+          <span class="ph">Context</span>
+          <div class="step"><strong>Jira story + PR / dev-status</strong><span>Summary, components, links, fixVersions, and changed-file counts from GitHub — plus optional Rovo AI enrichment.</span></div>
+        </li>
+        <li>
+          <span class="ph">Retrieval</span>
+          <div class="step"><strong>Titan embedding → pgvector (HNSW)</strong><span>7 lenses: candidate TestSigma cases · KB pages · code symbols · historical defects · Salesforce metadata · integration touchpoints · user docs.</span></div>
+        </li>
+        <li>
+          <span class="ph">Analysis</span>
+          <div class="step"><strong>AWS Bedrock — Claude</strong><span>Two concurrency lanes (interactive + background) classify each case <code>REUSE / UPDATE / NEW</code> with reasoning, lens evidence, confidence, and a parallel performance-impact assessment.</span></div>
+        </li>
+        <li>
+          <span class="ph">Approval</span>
+          <div class="step"><strong>Human-in-the-loop gate</strong><span>Editors review and edit; superadmins approve behind an 85% similarity guard on NEW cases. Nothing is written without sign-off.</span></div>
+        </li>
+        <li>
+          <span class="ph">Push</span>
+          <div class="step"><strong>Reversible TestSigma write</strong><span>NEW → create, UPDATE → update, REUSE → no-op. Every push stores a before/after snapshot, so any write can be rolled back.</span></div>
+        </li>
+      </ol>
     </div>
 
     <div class="rv-highlights">
@@ -414,15 +450,23 @@
     </div>
 
     <div class="rv-actions">
-      <a class="btn btn-primary" href="./assets/runview-architecture.pdf" download>
+      <a class="btn btn-primary" href="./assets/architecture-diagram.pdf" download>
         Architecture &amp; data flow (PDF)
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14m-6-6 6 6 6-6"/></svg>
       </a>
-      <a class="btn btn-secondary" href="./assets/runview-technical-docs.pdf" download>
-        Technical documentation (PDF)
+      <a class="btn btn-secondary" href="./assets/ARCHITECTURE.pdf" download>
+        Architecture deep-dive (PDF)
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14m-6-6 6 6 6-6"/></svg>
       </a>
-      <a class="btn btn-gold" href="./assets/resume.pdf" download>
+      <a class="btn btn-secondary" href="./assets/PRODUCT_DOCUMENTATION.pdf" download>
+        Product &amp; technical docs (PDF)
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14m-6-6 6 6 6-6"/></svg>
+      </a>
+      <a class="btn btn-secondary" href="./assets/SECURITY_AUDIT.pdf" download>
+        Security audit (PDF)
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14m-6-6 6 6 6-6"/></svg>
+      </a>
+      <a class="btn btn-gold" href="./assets/MadhuSudhan_Painoori_Executive_Resume_2026.pdf" download>
         Résumé (PDF)
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14m-6-6 6 6 6-6"/></svg>
       </a>
@@ -632,7 +676,7 @@
         <p>I'm a leader who still ships: comfortable owning org strategy and writing the agentic platform behind it. Most interested in <strong>SaaS, AI-native</strong>, and <strong>Salesforce-ecosystem</strong> companies building serious AI into their engineering.</p>
         <p>The fastest way to reach me is email — I respond to most inquiries within 48 hours.</p>
         <div style="margin-top: 40px; display: flex; gap: 16px; flex-wrap: wrap;">
-          <a class="btn btn-gold" href="./assets/resume.pdf" download>
+          <a class="btn btn-gold" href="./assets/MadhuSudhan_Painoori_Executive_Resume_2026.pdf" download>
             Download résumé (PDF)
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14m-6-6 6 6 6-6"/></svg>
           </a>
