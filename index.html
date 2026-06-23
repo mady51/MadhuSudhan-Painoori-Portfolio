@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Madhu Sudhan Painoori — Senior Director, Quality Engineering</title>
-<meta name="description" content="Senior Director, Quality Engineering at AutoRabit. AI platforms serving Product, Engineering, QA, SRE, and Support. Automated ~95% of manual QA effort and reduced customer escalations by ~70%.">
+<title>Madhu Sudhan Painoori — AI Quality Engineering Leader & Platform Builder</title>
+<meta name="description" content="Quality Engineering executive and hands-on platform builder. Architected RunView — an agentic AI test-intelligence platform (FastAPI · React 19 · PostgreSQL/pgvector · AWS Bedrock RAG). Leads a 50-person QA org at AutoRabit; automated ~95% of manual effort, cut escalations ~70%.">
 <meta name="author" content="Madhu Sudhan Painoori">
 
 <meta property="og:type" content="profile">
-<meta property="og:title" content="Madhu Sudhan Painoori — Senior Director, Quality Engineering">
-<meta property="og:description" content="AI Platforms Serving Product · Engineering · QA · SRE · Support. ~95% manual effort automated. ~70% customer escalations reduced.">
-<meta property="og:image" content="./assets/infographic.png">
+<meta property="og:title" content="Madhu Sudhan Painoori — AI Quality Engineering Leader & Platform Builder">
+<meta property="og:description" content="Architect of RunView, an agentic AI test-intelligence platform (RAG · AWS Bedrock · pgvector · FastAPI · React 19). 20+ years scaling engineering quality.">
+<meta property="og:image" content="./assets/runview-architecture.png">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -175,7 +175,26 @@
   .footer-bar p { font-family: var(--mono); font-size: 11px; letter-spacing: 1px; color: rgba(250,247,242,0.4); text-transform: uppercase; }
   @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
 
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  /* ---- RunView flagship ---- */
+  .runview { background: var(--paper); }
+  .rv-stack { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 64px; }
+  .rv-chip { font-family: var(--mono); font-size: 12px; letter-spacing: 0.3px; padding: 9px 14px; background: var(--ink); color: var(--cream); border-radius: 2px; }
+  .rv-chip em { color: var(--gold-soft); font-style: normal; }
+  .pillar .kicker { font-family: var(--mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; display: block; }
+  .rv-diagram { margin-top: 72px; }
+  .rv-diagram h3 { font-family: var(--serif); font-size: clamp(24px, 3vw, 32px); font-weight: 400; color: var(--ink); margin-bottom: 10px; }
+  .rv-diagram .cap { color: var(--muted); font-size: 15px; line-height: 1.6; margin-bottom: 26px; max-width: 74ch; }
+  .diagram-frame { background: var(--cream); border: 1px solid var(--line); border-radius: 4px; padding: 22px; box-shadow: 0 26px 64px rgba(14,26,46,0.10); overflow-x: auto; }
+  .diagram-frame img { width: 100%; height: auto; display: block; min-width: 760px; }
+  .rv-highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px 32px; margin-top: 72px; }
+  .rv-hl { border-top: 2px solid var(--gold-soft); padding-top: 18px; }
+  .rv-hl h4 { font-family: var(--mono); font-size: 11px; letter-spacing: 1.3px; text-transform: uppercase; color: var(--navy); margin-bottom: 10px; line-height: 1.4; }
+  .rv-hl p { font-size: 14.5px; line-height: 1.62; color: var(--muted); }
+  .rv-hl code { font-family: var(--mono); font-size: 12.5px; color: var(--gold); background: var(--gold-bg); padding: 1px 5px; border-radius: 2px; }
+  .rv-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 56px; }
+  @media (max-width: 860px) { .rv-highlights { grid-template-columns: 1fr; } }
+
+
   .hero-label, .hero h1, .hero-sub, .hero-meta { animation: fadeUp 0.8s ease-out backwards; }
   .hero-label { animation-delay: 0.1s; }
   .hero h1 { animation-delay: 0.2s; }
@@ -189,9 +208,10 @@
   <div class="nav-inner">
     <div class="nav-name">Madhu <em>Painoori</em></div>
     <div class="nav-links">
-      <a href="#work">Work</a>
-      <a href="#architecture">Architecture</a>
-      <a href="#playbook">Playbook</a>
+      <a href="#runview">RunView</a>
+      <a href="#work">Platforms</a>
+      <a href="#architecture">Ecosystem</a>
+      <a href="#experience">Experience</a>
       <a href="#contact" class="nav-cta">Get in touch</a>
     </div>
   </div>
@@ -199,10 +219,10 @@
 
 <header class="hero">
   <div class="container hero-inner">
-    <div class="hero-label">Senior Director · Quality Engineering · AutoRabit</div>
-    <h1>Building <em>AI platforms</em> that power engineering organizations.</h1>
+    <div class="hero-label">AI Quality Engineering · Platform Architect · AutoRabit</div>
+    <h1>I architect the <em>AI systems</em> that test modern software.</h1>
     <p class="hero-sub">
-      I lead Quality Engineering at AutoRabit, the DevSecOps platform for Salesforce, with a <strong>10-person QA org and 100+ matrix scope</strong> across Product, Engineering, QA, SRE, and Support. I build AI agent fleets, an agentic delivery platform on AWS Kiro, and the in-house intelligence layer (RabbitView) that powers our engineering organization.
+      I lead Quality Engineering at AutoRabit, the DevSecOps platform for Salesforce, running a <strong>50-person QA org with 100+ matrix scope</strong> across Product, Engineering, QA, SRE, and Support. I also stay hands-on: I architected and built <strong>RunView</strong> from scratch — an agentic test-intelligence platform with a 7-lens <strong>RAG</strong> retrieval engine, <strong>AWS Bedrock</strong> reasoning, human-in-the-loop approval, and self-healing Playwright automation, on <strong>FastAPI · React 19 · PostgreSQL/pgvector</strong>.
     </p>
     <div class="hero-meta">
       <div class="meta-item">
@@ -211,7 +231,7 @@
       </div>
       <div class="meta-item">
         <div class="label">Open to</div>
-        <div class="value">Senior leadership conversations</div>
+        <div class="value">VP / Director — AI &amp; QE</div>
       </div>
       <div class="meta-item">
         <div class="label">Reach me</div>
@@ -233,8 +253,8 @@
         <div class="label">Customer Escalations<br>Reduced</div>
       </div>
       <div class="metric">
-        <div class="num"><em>110</em>+</div>
-        <div class="label">Cross-Functional Scope<br>Product · Eng · QA · SRE · Support</div>
+        <div class="num"><em>50</em></div>
+        <div class="label">QA Engineers Led<br>100+ Cross-Functional Matrix Scope</div>
       </div>
       <div class="metric">
         <div class="num"><em>20</em>+</div>
@@ -295,11 +315,126 @@
   </div>
 </section>
 
+<section class="runview" id="runview">
+  <div class="container">
+    <div class="section-label">Flagship Build</div>
+    <h2 class="section-title">RunView — an agentic test-intelligence platform, <em>built end to end</em>.</h2>
+    <p class="section-intro">
+      A self-hosted platform I architected and wrote from scratch: three products on one backend — a CI results portal, an AI SDET agent, and a full test-management workspace. It turns a Jira story into reviewed, traceable test cases through retrieval-augmented reasoning and a human approval gate, and authors and self-heals its own Playwright automation. Shipped as a single hardened Docker image, multi-workspace across ARM, CodeScan, Vault, Guard, and Salesforce.
+    </p>
+
+    <div class="rv-stack">
+      <span class="rv-chip">FastAPI <em>· Python 3.12</em></span>
+      <span class="rv-chip">React 19 <em>· TypeScript · Vite</em></span>
+      <span class="rv-chip">PostgreSQL 17 <em>· pgvector</em></span>
+      <span class="rv-chip">AWS Bedrock <em>· Claude + Titan</em></span>
+      <span class="rv-chip">Docker <em>· non-root, hardened</em></span>
+      <span class="rv-chip">SQLAlchemy <em>· Alembic</em></span>
+      <span class="rv-chip">Playwright <em>· Claude Code CLI</em></span>
+      <span class="rv-chip">RBAC <em>· OIDC SSO · Fernet</em></span>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <span class="kicker">Pillar 01 · Results Portal</span>
+        <h3>CI results, made legible</h3>
+        <p>Ingests JUnit, Mabl, and live-stream runs by API key. Dashboards, flaky-test detection, per-test history, a deployment-health monitor, and printable reports — with automatic retention purging.</p>
+        <ul>
+          <li>JUnit · Mabl · live stream</li>
+          <li>Flaky-test detection</li>
+          <li>Deployment monitor</li>
+          <li>Coverage drift detector</li>
+        </ul>
+      </div>
+      <div class="pillar">
+        <span class="kicker">Pillar 02 · SDET Agent</span>
+        <h3>Story → reviewed test cases</h3>
+        <p>An async, human-in-the-loop agent. Pulls Jira/PR context, runs 7-lens vector retrieval, and uses Bedrock/Claude to classify each case REUSE / UPDATE / NEW — then pushes to TestSigma only after approval, reversibly.</p>
+        <ul>
+          <li>7-lens RAG retrieval</li>
+          <li>Titan embeddings · pgvector</li>
+          <li>REUSE / UPDATE / NEW</li>
+          <li>Reversible, audited writes</li>
+        </ul>
+      </div>
+      <div class="pillar">
+        <span class="kicker">Pillar 03 · Test Library</span>
+        <h3>Full test management</h3>
+        <p>Suites, folders, plans, cycles, and an inline-checklist runner. Requirements traceability, defects, reviews, and automation-to-case mapping that surfaces coverage gaps — 28 workspace-scoped, audited tables.</p>
+        <ul>
+          <li>Plans · cycles · execution</li>
+          <li>Requirements traceability</li>
+          <li>Automation ↔ case mapping</li>
+          <li>Coverage-gap detection</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rv-diagram">
+      <h3>The system, at a glance</h3>
+      <p class="cap">One backend, three pillars, and the external services they orchestrate — clients and CI on the left, AI and tooling integrations on the right, all scoped per workspace with secrets encrypted at rest.</p>
+      <div class="diagram-frame">
+        <img src="./assets/runview-architecture.png" alt="RunView system architecture and data flow: React SPA + FastAPI, PostgreSQL 17 + pgvector, and external services including AWS Bedrock, TestSigma, Jira, GitHub, and OIDC SSO" loading="lazy">
+      </div>
+    </div>
+
+    <div class="rv-diagram">
+      <h3>How the agent thinks</h3>
+      <p class="cap">A single SDET run: a DB-backed worker queue claims the job, gathers context, embeds and retrieves across seven lenses, reasons with Bedrock across two concurrency lanes, and stops at a human approval gate before any reversible write.</p>
+      <div class="diagram-frame">
+        <img src="./assets/runview-agentflow.png" alt="RunView SDET agent run: trigger, DB-backed worker queue, context pull, Titan embedding and pgvector retrieval across seven lenses, AWS Bedrock analysis in interactive and background lanes, then human approval and reversible TestSigma push" loading="lazy">
+      </div>
+    </div>
+
+    <div class="rv-highlights">
+      <div class="rv-hl">
+        <h4>7-Lens RAG Retrieval</h4>
+        <p>A query embedding fans out across candidate test cases, KB pages, code symbols, historical defects, Salesforce metadata, integration touchpoints, and user docs — so proposals are grounded in real context, not guesses.</p>
+      </div>
+      <div class="rv-hl">
+        <h4>Vector Search at the Core</h4>
+        <p>1024-dim Titan embeddings indexed with <code>pgvector</code> HNSW cosine search, living right beside the relational data in PostgreSQL — no separate vector store to operate.</p>
+      </div>
+      <div class="rv-hl">
+        <h4>Dual-Lane Bedrock Concurrency</h4>
+        <p>An interactive lane keeps on-demand runs responsive while a capped background lane handles bulk revamp and release analysis — so heavy jobs never starve the UI.</p>
+      </div>
+      <div class="rv-hl">
+        <h4>Human-in-the-Loop, Reversible</h4>
+        <p>Editors review, superadmins approve behind an 85% similarity guard, and every push to TestSigma stores a before/after snapshot — so any write can be rolled back.</p>
+      </div>
+      <div class="rv-hl">
+        <h4>Self-Healing Automation</h4>
+        <p>Generates Playwright specs via the Claude Code CLI, validates against the live app, and self-heals up to N times — a real product failure is classified and surfaced, not healed forever.</p>
+      </div>
+      <div class="rv-hl">
+        <h4>Built to Run Anywhere</h4>
+        <p>One multi-stage Docker image (non-root UID 10001, dropped capabilities), Postgres on an internal network, additive Alembic migrations, and optional OIDC SSO with secrets encrypted at rest.</p>
+      </div>
+    </div>
+
+    <div class="rv-actions">
+      <a class="btn btn-primary" href="./assets/runview-architecture.pdf" download>
+        Architecture &amp; data flow (PDF)
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14m-6-6 6 6 6-6"/></svg>
+      </a>
+      <a class="btn btn-secondary" href="./assets/runview-technical-docs.pdf" download>
+        Technical documentation (PDF)
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14m-6-6 6 6 6-6"/></svg>
+      </a>
+      <a class="btn btn-gold" href="./assets/resume.pdf" download>
+        Résumé (PDF)
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14m-6-6 6 6 6-6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
 <section class="architecture" id="architecture">
   <div class="container architecture-inner">
-    <div class="section-label">Architecture</div>
-    <h2 class="section-title">The system, <em>at a glance</em>.</h2>
-    <p class="section-intro">One page. Every component, every agent, every platform. The diagram I bring into interviews and walkthroughs.</p>
+    <div class="section-label">The Wider Ecosystem</div>
+    <h2 class="section-title">Beyond RunView — <em>the platforms behind the org</em>.</h2>
+    <p class="section-intro">RunView is one build among several. This is the wider AI-native engineering system I run at AutoRabit: the agentic delivery platform, the specialized agent fleet, and RabbitView, the intelligence layer that serves Product, Engineering, and QA leadership.</p>
     <div class="infographic-frame">
       <img src="./assets/infographic.png" alt="AI-Native Engineering Excellence Architecture — Madhu Painoori" loading="lazy">
     </div>
@@ -363,11 +498,11 @@
   </div>
 </section>
 
-<section>
+<section id="experience">
   <div class="container">
     <div class="section-label">Experience</div>
     <h2 class="section-title">Twenty years, <em>five chapters</em>.</h2>
-    <p class="section-intro">From production DBA to Senior Director, the throughline has always been the same: scale engineering quality without scaling effort linearly. AI agents are the latest answer to a question I've been asking for two decades.</p>
+    <p class="section-intro">From production DBA to Quality Engineering leadership, the throughline never changed: scale engineering quality without scaling effort linearly. Agentic AI is the latest answer to a question I've been working on for two decades.</p>
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-period">May 2021 — Present</div>
@@ -375,7 +510,7 @@
           <div class="timeline-current"><span>Current Role</span></div>
           <div class="timeline-role">Senior Director, Quality Engineering</div>
           <div class="timeline-company">AutoRabit Pvt Ltd · DevSecOps SaaS for Salesforce</div>
-          <p class="timeline-desc">Cross-functional leadership across Product, Engineering, QA, SRE, and Support. Built the agentic AI platform, RabbitView, and the in-house intelligence layer. Automated ~95% of manual QA effort and reduced customer escalations by ~70%.</p>
+          <p class="timeline-desc">Lead a 50-person QA org with 100+ matrix scope across Product, Engineering, QA, SRE, and Support. Architected and built RunView (agentic test-intelligence platform), the AWS Bedrock + Kiro agentic delivery pipeline, and RabbitView (engineering intelligence). Automated ~95% of manual effort and cut customer escalations ~70%.</p>
         </div>
       </div>
       <div class="timeline-item">
@@ -418,34 +553,38 @@
   <div class="container">
     <div class="section-label">Stack</div>
     <h2 class="section-title">Tools and platforms <em>I work with</em>.</h2>
-    <p class="section-intro">Selected for fit, not for novelty. Highlighted in gold: the platforms I've built systems on (not just consumed).</p>
+    <p class="section-intro">Selected for fit, not for novelty. Highlighted in gold: the platforms and systems I've built on — not just consumed.</p>
     <div class="tech-grid">
       <div class="tech-block">
-        <h4>AI &amp; GenAI</h4>
+        <h4>AI, GenAI &amp; Retrieval</h4>
         <div class="tech-tags">
-          <span class="tech-tag">GitHub Copilot</span>
-          <span class="tech-tag">ChatGPT</span>
-          <span class="tech-tag">Claude</span>
-          <span class="tech-tag featured">Amazon Bedrock</span>
+          <span class="tech-tag featured">AWS Bedrock</span>
+          <span class="tech-tag featured">Claude / Claude Code</span>
+          <span class="tech-tag featured">RAG</span>
+          <span class="tech-tag featured">pgvector / HNSW</span>
+          <span class="tech-tag featured">Titan Embeddings</span>
           <span class="tech-tag featured">AWS Kiro</span>
+          <span class="tech-tag featured">Playwright + MCP</span>
+          <span class="tech-tag">Copilot</span>
           <span class="tech-tag">Cursor</span>
           <span class="tech-tag">KaneAI</span>
           <span class="tech-tag">Mabl</span>
           <span class="tech-tag">TestAI</span>
-          <span class="tech-tag featured">Playwright + MCP</span>
         </div>
       </div>
       <div class="tech-block">
-        <h4>In-house platforms (TypeScript · Python · Docker · PostgreSQL · Redis)</h4>
+        <h4>Platform &amp; Full-Stack (systems I've built)</h4>
         <div class="tech-tags">
+          <span class="tech-tag featured">RunView</span>
+          <span class="tech-tag featured">FastAPI</span>
+          <span class="tech-tag featured">React 19 / TypeScript</span>
+          <span class="tech-tag featured">PostgreSQL 17</span>
+          <span class="tech-tag featured">SQLAlchemy / Alembic</span>
+          <span class="tech-tag featured">Docker</span>
           <span class="tech-tag featured">RabbitView</span>
-          <span class="tech-tag featured">Agentic AI Platform</span>
           <span class="tech-tag featured">AI-Enabled TMS</span>
-          <span class="tech-tag featured">Report Portal</span>
-          <span class="tech-tag featured">Telemetry</span>
-          <span class="tech-tag featured">Skill Matrix</span>
-          <span class="tech-tag featured">Performance Optimizing Agent</span>
-          <span class="tech-tag featured">AutoScreen</span>
+          <span class="tech-tag">Redis</span>
+          <span class="tech-tag">OIDC / SSO</span>
         </div>
       </div>
       <div class="tech-block">
@@ -456,15 +595,15 @@
           <span class="tech-tag">Playwright</span>
           <span class="tech-tag">Apache Maven</span>
           <span class="tech-tag">Protractor</span>
-          <span class="tech-tag">Test Allure</span>
-          <span class="tech-tag">Neoload</span>
+          <span class="tech-tag">Allure</span>
+          <span class="tech-tag">NeoLoad</span>
           <span class="tech-tag">JMeter</span>
           <span class="tech-tag">LoadRunner</span>
           <span class="tech-tag">JProfiler</span>
         </div>
       </div>
       <div class="tech-block">
-        <h4>APM, DevOps &amp; Security</h4>
+        <h4>APM, DevOps, CI/CD &amp; Security</h4>
         <div class="tech-tags">
           <span class="tech-tag">Datadog</span>
           <span class="tech-tag">Dynatrace</span>
@@ -472,6 +611,7 @@
           <span class="tech-tag">Grafana</span>
           <span class="tech-tag">CloudWatch</span>
           <span class="tech-tag">Jenkins</span>
+          <span class="tech-tag">Bitbucket / CodeBuild</span>
           <span class="tech-tag">Chef</span>
           <span class="tech-tag">Puppet</span>
           <span class="tech-tag">Acunetix</span>
@@ -488,9 +628,9 @@
     <h2>Always open to <em>good conversations</em>.</h2>
     <div class="contact-grid">
       <div class="contact-text">
-        <p>I'm currently <strong>Senior Director, Quality Engineering at AutoRabit</strong>, and I'm open to conversations about senior leadership roles — VP and Senior Director positions in Quality Engineering, Engineering Effectiveness, Engineering Productivity, or AI for Engineering.</p>
-        <p>I'm particularly interested in <strong>SaaS, AI-native</strong>, and <strong>Salesforce-ecosystem</strong> companies, but happy to hear from anyone whose engineering organization is working on the kinds of problems described in the playbook.</p>
-        <p>The fastest way to reach me is email. I respond to most inquiries within 48 hours.</p>
+        <p>I'm currently <strong>Senior Director, Quality Engineering at AutoRabit</strong>, and open to <strong>VP and Director roles</strong> in AI Quality Engineering, Engineering Effectiveness / Developer Productivity, or AI Platform Engineering.</p>
+        <p>I'm a leader who still ships: comfortable owning org strategy and writing the agentic platform behind it. Most interested in <strong>SaaS, AI-native</strong>, and <strong>Salesforce-ecosystem</strong> companies building serious AI into their engineering.</p>
+        <p>The fastest way to reach me is email — I respond to most inquiries within 48 hours.</p>
         <div style="margin-top: 40px; display: flex; gap: 16px; flex-wrap: wrap;">
           <a class="btn btn-gold" href="./assets/resume.pdf" download>
             Download résumé (PDF)
@@ -511,6 +651,10 @@
         <a class="channel" href="https://www.linkedin.com/in/madhu-sudhan-painoori" target="_blank" rel="noopener">
           <span class="label">LinkedIn</span>
           <span class="value">linkedin.com/in/madhu-sudhan-painoori</span>
+        </a>
+        <a class="channel" href="https://github.com/mady51" target="_blank" rel="noopener">
+          <span class="label">GitHub</span>
+          <span class="value">github.com/mady51</span>
         </a>
         <div class="channel" style="cursor: default;">
           <span class="label">Location</span>
